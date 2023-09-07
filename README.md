@@ -1,23 +1,22 @@
 # RandomDataGeneratorwithPython
 
-Bu Python projesi, rastgele kişi bilgileri oluşturmanıza ve ilaç-tanı eşleşmelerini hesaplayarak bu kişilere eklemenize yardımcı olur. İlaç ve tanı eşleşmeleri, verileri daha gerçekçi hale getirmek için yüzdesel olarak hesaplanır.
+Bu Python programı, rastgele kişi bilgisi oluşturmak için kullanılır. Oluşturulan kişi bilgileri, belirtilen bir CSV dosyasından alınan ilk isim, soyisim ve cinsiyet bilgileri kullanılarak rastgele oluşturulur. Her bir kişiye benzersiz kimlik numarası, telefon numarası ve doğum tarihi atanır. Ayrıca, rastgele bir şehir ve ilçe/semt çifti de her kişiye eklenir.
 
-## Kullanım Kılavuzu
+Nasıl Kullanılır
+Python'un kurulu olduğundan ve gerekli kütüphanelerin yüklü olduğundan emin olun (kütüphaneler: random, csv, datetime, timedelta, pandas).
 
-1. Proje dosyalarını bilgisayarınıza klonlayın veya indirin.
+persons.csv adlı bir CSV dosyası oluşturun ve içine en azından fnames (ilk isim), lnames (soyisim) ve gender (cinsiyet) sütunlarını içeren kişi bilgilerini ekleyin.
 
-2. İlaç ve tanı verilerini içeren `med_ıcd10` dosyasını projenin ana dizinine ekleyin.
+cities_town.csv adlı bir CSV dosyası oluşturun ve içine en azından city (şehir) ve town (ilçe/semt) sütunlarını içeren şehir-ilçe/semt çiftlerini ekleyin.
 
-3. Proje klasörünü açın ve `modul1.py` dosyasını çalıştırın. Bu, rastgele kişi bilgilerini oluşturacak ve ilaç-tanı eşleşmelerini hesaplayacaktır.
+main fonksiyonunu çalıştırarak rastgele kişi bilgileri oluşturun ve random_persons.csv adlı bir CSV dosyasına kaydedin.
 
-4. İşlem tamamlandığında, `insert_script.sql` adlı bir SQL betiği oluşturulacaktır. Bu betik, oluşturulan verileri bir veritabanına eklemek için kullanılabilir.
+Oluşturulan kişi bilgilerini random_persons.csv dosyasında bulabilirsiniz.
 
-## Proje Katkıları
-
-Bu projeye katkıda bulunmak isterseniz, aşağıdaki adımları izleyebilirsiniz:
-
-1. Bu depoyu kendi GitHub hesabınıza forklayın.
-
-2. Yeni özellikler ekleyin veya hataları düzeltin.
-
-3. Değişikliklerinizi bir pull isteği (pull request) ile gönderin.
+Açıklama
+generate_random_birthdate(): Rastgele bir doğum tarihi oluşturur.
+generate_random_identity_number(existing_numbers): Rastgele bir kimlik numarası oluşturur ve benzersiz olduğundan emin olur.
+generate_random_phone_number(existing_numbers): Rastgele bir telefon numarası oluşturur ve benzersiz olduğundan emin olur.
+read_person_info_from_file(file_name): Kişi bilgilerini bir CSV dosyasından okur.
+create_random_person(existing_numbers, person_info_list, city_town_pairs): Rastgele bir kişi bilgisi oluşturur.
+main(): Ana işlemi yürütür, kişi bilgilerini oluşturur ve random_persons.csv dosyasına kaydeder.
