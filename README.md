@@ -17,11 +17,15 @@ main fonksiyonunu çalıştırarak rastgele kişi bilgileri oluşturun ve random
 
 Oluşturulan kişi bilgilerini random_persons.csv dosyasında bulabilirsiniz.
 
-Açıklama
+# Açıklama
 generate_random_birthdate(): Rastgele bir doğum tarihi oluşturur.
+
 generate_random_identity_number(existing_numbers): Rastgele bir kimlik numarası oluşturur ve benzersiz olduğundan emin olur.
+
 generate_random_phone_number(existing_numbers): Rastgele bir telefon numarası oluşturur ve benzersiz olduğundan emin olur.
+
 read_person_info_from_file(file_name): Kişi bilgilerini bir CSV dosyasından okur.
+
 create_random_person(existing_numbers, person_info_list, city_town_pairs): Rastgele bir kişi bilgisi oluşturur.
+
 main(): Ana işlemi yürütür, kişi bilgilerini oluşturur ve random_persons.csv dosyasına kaydeder.
-Katkıda
